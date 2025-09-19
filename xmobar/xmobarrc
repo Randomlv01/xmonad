@@ -1,0 +1,23 @@
+Config { overrideRedirect = False
+       , font     = "UbuntuMono Nerd Font Bold 11"
+       , bgColor  = "#282c34"
+       , fgColor  = "#AAD94C"
+       , alpha    = 200
+       , position = TopSize L 100 24
+       , iconRoot = "."
+       , commands = [ Run Cpu
+                        [ "-L", "20"
+                        , "-H", "50"
+                        , "--high"  , "red"
+                        , "--normal", "green"
+                        ] 10
+                    , Run Memory ["--template", "Mem: <usedratio>%"] 10
+                    , Run Com "bash" ["-c", "pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}'"] "volume" 5
+                    , Run Swap [] 10
+                    , Run Date "%a %Y-%m-%d <fc=#AAD94C>(%H:%M)</fc>" "date" 10
+                    , Run XMonadLog
+                    ]
+       , sepChar  = "%"
+       , alignSep = "}{"
+       , template = "<fc=#fffff0>  </fc> %XMonadLog% }{ 󱄠 %volume% |<fc=#95E6CB>   %cpu% </fc>|<fc=#D2A6FF>   %memory% * %swap% </fc>|<fc=#FF8F40>   %date% </fc>"
+       }
