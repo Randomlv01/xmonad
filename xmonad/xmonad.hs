@@ -63,8 +63,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_o     ), spawn "pactl set-sink-volume @DEFAULT_SINK@ -5%")
     , ((modm,               xK_d     ), spawn "rofi -show drun")
     , ((modm,               xK_Return), spawn "alacritty")
---    , ((modm,               xK_b     ), spawn "firefox")
---    , ((modm,               xK_e     ), spawn "nautilus")
+    , ((modm,               xK_i     ), spawn "firefox")
+    , ((modm,               xK_f     ), spawn "nautilus")
 
     , ((modm,               xK_f     ), spawn "flameshot gui")
 
