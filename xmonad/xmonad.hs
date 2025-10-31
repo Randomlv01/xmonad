@@ -66,7 +66,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_i     ), spawn "firefox")
     , ((modm,               xK_f     ), spawn "nautilus")
 
-    , ((modm,               xK_f     ), spawn "flameshot gui")
+--    , ((modm,               xK_f     ), spawn "flameshot gui")
 
     , ((modm,               xK_q     ), kill)
 
