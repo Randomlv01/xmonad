@@ -234,7 +234,7 @@ defaults = def {
         mouseBindings      = myMouseBindings,
 
       -- hooks, layouts
-        layoutHook         = smartBorders myLayout,
+        layoutHook         = myLayout,
         manageHook         = manageSpawn <> manageHook def,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
